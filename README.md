@@ -16,24 +16,22 @@ It contains
     ![git1](https://github.com/user-attachments/assets/64cb7e3a-c0c3-4fed-8f24-0c2c91069ef8)
 
 
-```
+ Terrain Generation Pipeline
 
-### Terrain Generation Pipeline
-
-1. **Noise Sampling**: Dual-noise system (height + biome)
-2. **Biome Classification**: 
-   - **Plains** (biome < 0.4): Flat, sparse trees, easy traversal
-   - **Hills** (0.4-0.7): Rolling terrain, dense forests
-   - **Mountains** (> 0.7): Dramatic peaks, sparse vegetation
-3. **Height Mapping**:
+1. Noise Sampling: Dual-noise system (height + biome)
+2. Biome Classification: 
+   - Plains (biome < 0.4): Flat, sparse trees, easy traversal
+   - Hills (0.4-0.7): Rolling terrain, dense forests
+   - Mountains (> 0.7): Dramatic peaks, sparse vegetation
+3. Height Mapping:
    - Water: < 1.0 units
    - Sand: 1.0-1.5 units
    - Grass: 1.5-4.0 units
    - Snow: > 4.0 units
-4. **Mesh Construction**: Hexagonal prisms with top, bottom, and side faces
-5. **Collision Generation**: Trimesh for terrain, primitives for trees
+4. Mesh Construction: Hexagonal prisms with top, bottom, and side faces
+5. Collision Generation: Trimesh for terrain, primitives for trees
 
-### Installation
+ Installation
 
 1. Copy these scripts to your Godot project:
    - `WorldManager.gd`
