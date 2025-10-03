@@ -20,14 +20,14 @@ It contains
 
 1. Noise Sampling: Dual-noise system (height + biome)
 2. Biome Classification: 
-   - Plains (biome < 0.4): Flat, sparse trees, easy traversal
-   - Hills (0.4-0.7): Rolling terrain, dense forests
-   - Mountains (> 0.7): Dramatic peaks, sparse vegetation
+   Plains (biome < 0.4): Flat, sparse trees, easy traversal
+   Hills (0.4-0.7): Rolling terrain, dense forests
+   Mountains (> 0.7): Dramatic peaks, sparse vegetation
 3. Height Mapping:
-   - Water: < 1.0 units
-   - Sand: 1.0-1.5 units
-   - Grass: 1.5-4.0 units
-   - Snow: > 4.0 units
+   Water: < 1.0 units
+   Sand: 1.0-1.5 units
+   Grass: 1.5-4.0 units
+   Snow: > 4.0 units
 4. Mesh Construction: Hexagonal prisms with top, bottom, and side faces
 5. Collision Generation: Trimesh for terrain, primitives for trees
 
@@ -70,9 +70,9 @@ $WorldManager.chunk_radius = 5  # More chunks = larger view distance
 $WorldManager.chunk_size = 7  # Larger chunks = fewer chunk transitions
 ```
 
-## ⚙️ Configuration
+Configuration
 
-### WorldManager Settings
+WorldManager Settings
 
 | Parameter | Default | Description |
 |-----------|---------|-------------|
