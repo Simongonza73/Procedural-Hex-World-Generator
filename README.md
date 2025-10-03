@@ -38,7 +38,7 @@ It contains
 1. Copy these scripts to your Godot project:
    - `WorldManager.gd`
    - `Chunk.gd`
-   - `HexTile.gd` (optional, for reference)
+   - `HexTile.gd` 
 
 2. Create required materials in Godot:
    - Water Material (Blue, transparent)   Water needs fixes
