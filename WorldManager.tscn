@@ -1,0 +1,82 @@
+[gd_scene load_steps=10 format=3 uid="uid://dp5rvw4b7uqai"]
+
+[ext_resource type="Script" uid="uid://drk0005yhj0wa" path="res://scrips/WorldManager.gd" id="1_41u3f"]
+[ext_resource type="Script" uid="uid://1bgofgtjscal" path="res://scrips/UIManager.gd" id="2_idisu"]
+[ext_resource type="PackedScene" uid="uid://2nqsfiaof8nq" path="res://Player.tscn" id="3_fpysk"]
+[ext_resource type="Texture2D" uid="uid://plu3uyedbsic" path="res://environment/sky/citrus_orchard_road_puresky_2k.exr" id="4_hxpwf"]
+[ext_resource type="Script" uid="uid://di8t0hxvxqvt5" path="res://scrips/fps.gd" id="5_nijph"]
+[ext_resource type="Script" uid="uid://cm3uj1wj17dh2" path="res://scrips/respawn.gd" id="6_hxcnf"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_nijph"]
+panorama = ExtResource("4_hxpwf")
+
+[sub_resource type="Sky" id="Sky_hxcnf"]
+sky_material = SubResource("PanoramaSkyMaterial_nijph")
+
+[sub_resource type="Environment" id="Environment_d8vwy"]
+background_mode = 2
+sky = SubResource("Sky_hxcnf")
+ambient_light_source = 3
+
+[node name="Node3D" type="Node3D" node_paths=PackedStringArray("player")]
+script = ExtResource("1_41u3f")
+player = NodePath("CharacterBody3D")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("3_fpysk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.954951, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2755727, 0)
+visible = false
+use_collision = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_d8vwy")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.795928, 0.60539126, 0, -0.60539126, 0.795928, 0, 5.9784875, 5.808844)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SeedInput" type="LineEdit" parent="CanvasLayer"]
+offset_left = 38.0
+offset_top = 2.0
+offset_right = 111.0
+offset_bottom = 37.0
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 56.0
+offset_bottom = 29.0
+text = "Seed"
+
+[node name="GenerateButton" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("seed_input", "world_manager")]
+anchors_preset = -1
+anchor_right = 0.008
+anchor_bottom = 0.006
+offset_left = 3.0
+offset_top = 39.0
+offset_right = 73.784
+offset_bottom = 66.112
+text = "Generate"
+script = ExtResource("2_idisu")
+seed_input = NodePath("../SeedInput")
+world_manager = NodePath("../..")
+
+[node name="fps" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="fps"]
+offset_left = 142.0
+offset_top = 9.0
+offset_right = 172.0
+offset_bottom = 32.0
+script = ExtResource("5_nijph")
+
+[node name="Respawn" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="Respawn"]
+offset_left = 4.0
+offset_top = 92.0
+offset_right = 82.0
+offset_bottom = 123.0
+text = "Respawn"
+script = ExtResource("6_hxcnf")

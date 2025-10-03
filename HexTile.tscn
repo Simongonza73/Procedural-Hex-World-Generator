@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://v8jbtt8og4tl"]
+
+[ext_resource type="Script" uid="uid://djmuq8hxl5pw5" path="res://scrips/HexTile.gd" id="1_gtyx1"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_gtyx1")

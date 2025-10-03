@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://b551rv4ipx3gs"]
+
+[ext_resource type="Script" uid="uid://bjj7lca8v3j4a" path="res://scrips/Chunk.gd" id="1_lexys"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lexys"]
+albedo_color = Color(0.40756926, 0.36684343, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s3wkh"]
+albedo_color = Color(1, 1, 0.3529412, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r8y4k"]
+albedo_color = Color(0.68705595, 0.729425, 0.02465103, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fbyps"]
+albedo_color = Color(0.99421567, 0.79463226, 0.8498799, 1)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_lexys")
+water_material = SubResource("StandardMaterial3D_lexys")
+sand_material = SubResource("StandardMaterial3D_s3wkh")
+grass_material = SubResource("StandardMaterial3D_r8y4k")
+snow_material = SubResource("StandardMaterial3D_fbyps")

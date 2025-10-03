@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://2nqsfiaof8nq"]
+
+[ext_resource type="Script" uid="uid://dtsbt7b6015hu" path="res://scrips/Player.gd" id="1_xhfnw"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kpjcp"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" node_paths=PackedStringArray("camera_node")]
+script = ExtResource("1_xhfnw")
+camera_node = NodePath("Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_kpjcp")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.726789, -0.28523993)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
