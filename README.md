@@ -27,9 +27,10 @@ Chunk (Terrain Container)
     ├── Creates collision shapes
     └── Spawns vegetation
     
-HexTile (Individual Hex - Legacy, not used in optimized version)
-    └── Basic hex geometry (reference implementation)
-    <img width="1920" height="1080" alt="imagen" src="https://github.com/user-attachments/assets/b345ea17-d255-4942-af4f-4303c7b755b2" />
+HexTile (Individual Hex)
+    └── Basic hex geometry
+    ![git1](https://github.com/user-attachments/assets/64cb7e3a-c0c3-4fed-8f24-0c2c91069ef8)
+
 
 ```
 
