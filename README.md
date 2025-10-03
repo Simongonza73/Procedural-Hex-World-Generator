@@ -12,23 +12,7 @@ It contains
 - Seeded Generation: Reproducible worlds using custom seeds
 - Optimized Collision: Efficient trimesh collision for terrain and separate tree collision bodies
 
-How It Works
 
-- World Structure
-
-WorldManager (Main Controller)
-    ├── Manages chunk loading radius around player
-    ├── Handles seed-based world generation
-    └── Spawns/despawns chunks dynamically
-    
-Chunk (Terrain Container)
-    ├── Generates hex-based terrain meshes
-    ├── Uses FastNoiseLite for height/biome variation
-    ├── Creates collision shapes
-    └── Spawns vegetation
-    
-HexTile (Individual Hex)
-    └── Basic hex geometry
     ![git1](https://github.com/user-attachments/assets/64cb7e3a-c0c3-4fed-8f24-0c2c91069ef8)
 
 
