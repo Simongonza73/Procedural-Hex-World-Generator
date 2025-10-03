@@ -30,7 +30,8 @@ It contains
    Snow: > 4.0 units
 4. Mesh Construction: Hexagonal prisms with top, bottom, and side faces
 5. Collision Generation: Trimesh for terrain, primitives for trees
-6. Player movement: W,A,S,D. Toggle_mouse (Escape)
+6. Player movement(Enable Inputmap): W,A,S,D. toggle_mouse (Escape)
+7. Seed: you can change seed when start the game and press generate
 
  Installation
 
