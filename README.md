@@ -41,7 +41,7 @@ It contains
    - `HexTile.gd` (optional, for reference)
 
 2. Create required materials in Godot:
-   - Water Material (Blue, transparent)
+   - Water Material (Blue, transparent)   Water needs fixes
    - Sand Material (Beige)
    - Grass Material (Green)
    - Snow Material (White)
